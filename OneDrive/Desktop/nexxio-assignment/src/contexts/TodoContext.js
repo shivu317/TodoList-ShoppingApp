@@ -22,8 +22,20 @@ const todoReducer = (state, action) => {
       return {
         ...state,
         todos: state.todos.map(todo =>
-          todo.id === action.payload.id ? { ...todo, text: action.payload.text } : todo
+          todo.id === action.payload.id ? { ...todo, title: action.payload.title } : todo
         ),
+      };
+    case 'TOGGLE_TASK':
+      return {
+        ...state,
+        todos: state.todos.map(todo =>
+          todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo
+        ),
+      };
+    case 'REMOVE_TASK':
+      return {
+        ...state,
+        todos: state.todos.filter(todo => todo.id !== action.payload),
       };
     default:
       return state;

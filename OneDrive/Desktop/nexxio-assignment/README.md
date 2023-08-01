@@ -35,7 +35,7 @@ The application uses React Router to set up multiple pages:
 ## Getting Started
 To run this application locally, follow the steps below:
 
-1. Clone the repository: `git clone <repository_url>`
+1. Clone the repository: `git clone <https://github.com/shivu317/TodoList-ShoppingApp/tree/nexxio-assignment/OneDrive/Desktop/nexxio-assignment>`
 2. Navigate to the project directory
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`

@@ -43,7 +43,7 @@ To run this application locally, follow the steps below:
 
 
   
-```
+
 
 ## How to Use
 - On the home page, you can see the welcome message and a brief introduction to the application.
@@ -52,3 +52,5 @@ To run this application locally, follow the steps below:
 - The About page provides information about the project, company, or team.
 - On the Contact page, you can submit inquiries or feedback using the contact form.
 
+## Deployment-Link - 
+[ https://todolist-shoppingapp.netlify.app/ ]

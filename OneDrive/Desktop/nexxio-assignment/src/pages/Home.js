@@ -1,35 +1,4 @@
-// import React from 'react';
-// import '../styles/Home.css';
 
-// const Home = () => {
-//   const shoppingItems = [
-//     { id: 1, name: 'Item 1', price: 10, image: 'https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg' },
-//     { id: 2, name: 'Item 2', price: 20, image: 'https://m.media-amazon.com/images/I/8199oh8PugS._AC_UY350_.jpg' },
-//     { id: 3, name: 'Item 3', price: 15, image: 'https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=400' },
-//     { id: 4, name: 'Item 4', price: 25, image: 'https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/4/a/tr:w-300,/4afbcecRLO1254_1.jpg' },
-//   ];
-
-//   return (
-//     <div className="home">
-//       <h2>Welcome to the To-Do List and Shopping Cart App!</h2>
-//       <p>This is the home page</p>
-
-//       <h3>Example Shopping Items:</h3>
-//       <ul className="shopping-items">
-//         {shoppingItems.map((item) => (
-//           <li key={item.id} className="shopping-item">
-//             <img src={item.image} alt={item.name} />
-//             <div className="item-details">
-//               <span className="item-name">{item.name}</span>
-//               <span className="item-price">${item.price}</span>
-//             </div>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-// export default Home;
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';

@@ -1,14 +1,14 @@
 import React from 'react';
 import { useCart } from '../contexts/CartContext';
 import CartItem from './CartItem';
-import '../styles/CartItem.css';
+import '../styles/ShoppingCart.css';
 
 const ShoppingCart = () => {
   const { state } = useCart();
   const { cartItems } = state;
 
   return (
-    <div>
+    <div className="shopping-cart">
       <h2>Shopping Cart</h2>
       <ul>
         {cartItems.map((item) => (

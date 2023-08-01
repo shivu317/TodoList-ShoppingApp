@@ -1,5 +1,5 @@
 
-ul {
+/* ul {
     list-style: none;
     padding: 0;
   }
@@ -26,4 +26,16 @@ ul {
   button:hover {
     background-color: #b52030;
   }
+   */
+
+   .shopping-cart {
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+ 
   

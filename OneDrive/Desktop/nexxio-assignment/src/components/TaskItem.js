@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useTodo } from '../contexts/TodoContext';
 import '../styles/TaskItem.css';
@@ -15,20 +14,22 @@ const TaskItem = ({ task }) => {
   };
 
   return (
-    <li>
+    <li className="task-item">
       <span
-        style={{
-          textDecoration: task.completed ? 'line-through' : 'none',
-        }}
+        className={task.completed ? 'task-text completed' : 'task-text'}
+        onClick={handleToggle}
       >
         {task.title}
       </span>
-      <button onClick={handleToggle}>
+      <button className="toggle-btn" onClick={handleToggle}>
         {task.completed ? 'Mark Incomplete' : 'Mark Complete'}
       </button>
-      <button onClick={handleRemove}>Remove</button>
+      <button className="remove-btn" onClick={handleRemove}>
+        Remove
+      </button>
     </li>
   );
 };
 
 export default TaskItem;
+

@@ -1,55 +1,55 @@
 import React, { useState } from 'react';
 import { useTodo } from '../contexts/TodoContext';
+import TaskItem from './TaskItem';
+import '../styles/TodoList.css';
 
 const TodoList = () => {
-  const [newTodo, setNewTodo] = useState('');
+  const [newTask, setNewTask] = useState('');
   const { state, dispatch } = useTodo();
   const { todos } = state;
 
-  const handleAddTodo = () => {
-    const newTodoItem = {
-      id: new Date().getTime(), // Generate a unique ID, you can use a library like uuid
-      text: newTodo,
+  const handleAddTask = () => {
+    const newTaskItem = {
+      id: new Date().getTime(),
+      title: newTask,
+      completed: false,
     };
-    dispatch({ type: 'ADD_TODO', payload: newTodoItem });
-    setNewTodo('');
+    dispatch({ type: 'ADD_TODO', payload: newTaskItem });
+    setNewTask('');
   };
 
-  const handleDeleteTodo = (id) => {
-    dispatch({ type: 'DELETE_TODO', payload: id });
+  const handleDeleteTask = (id) => {
+    dispatch({ type: 'REMOVE_TODO', payload: id });
   };
 
-  const handleUpdateTodo = (id, text) => {
-    const updatedTodoItem = {
+  const handleUpdateTask = (id, title) => {
+    const updatedTaskItem = {
       id,
-      text,
+      title,
     };
-    dispatch({ type: 'UPDATE_TODO', payload: updatedTodoItem });
+    dispatch({ type: 'UPDATE_TODO', payload: updatedTaskItem });
   };
 
   return (
-    <div>
+    <div className="todo-list">
       <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>
-            {todo.text}
-            <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
-            <button onClick={() => handleUpdateTodo(todo.id, 'Updated Text')}>Update</button>
-          </li>
+        {todos.map((task) => (
+          <TaskItem key={task.id} task={task} />
         ))}
       </ul>
-      <div>
+      <div className="add-task">
         <input
           type="text"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-          placeholder="Todo"
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}
+          placeholder="Add Task"
         />
-        <button onClick={handleAddTodo}>Add Todo</button>
+        <button className="add-btn" onClick={handleAddTask}>
+          Add Task
+        </button>
       </div>
     </div>
   );
 };
 
 export default TodoList;
-

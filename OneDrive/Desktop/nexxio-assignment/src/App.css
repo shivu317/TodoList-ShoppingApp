@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,24 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.navbar {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  background-color: #007bff;
+}
+
+.navbar li {
+  padding: 12px;
+}
+
+.navbar li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  text-decoration: underline;
 }

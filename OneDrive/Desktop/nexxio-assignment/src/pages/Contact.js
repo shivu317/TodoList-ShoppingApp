@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import '../styles/Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,18 +18,18 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    // Send the form data to your backend or handle the submission logic here
     setIsSubmitted(true);
   };
 
   return (
-    <div>
+    <div className="contact">
       <h1>Contact Us</h1>
       {isSubmitted ? (
         <p>Thank you for submitting the form!</p>
       ) : (
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="form-group">
             <label htmlFor="name">Name:</label>
             <input
               type="text"
@@ -39,7 +40,7 @@ const Contact = () => {
               required
             />
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="email">Email:</label>
             <input
               type="email"
@@ -50,7 +51,7 @@ const Contact = () => {
               required
             />
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="message">Message:</label>
             <textarea
               id="message"

@@ -8,12 +8,13 @@ import Contact from './pages/Contact';
 import TodoList from './components/TodoList';
 import ShoppingCart from './components/ShoppingCart';
 import WeatherWidget from './components/WeatherWidget';
+import './App.css';
 
 function App() {
   return (
     <div>
       <nav>
-        <ul>
+        <ul className="navbar">
           <li>
             <Link to="/">Home</Link>
           </li>
